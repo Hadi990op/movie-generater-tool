@@ -1,0 +1,7 @@
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_1_shot_1.mp4'
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_1_shot_2.mp4'
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_1_shot_3.mp4'
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_2_shot_1.mp4'
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_2_shot_2.mp4'
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_2_shot_3.mp4'
+file '/opt/baal-agent/workspace/movie-generator/projects/skills-test/video/act_1_scene_2_shot_4.mp4'

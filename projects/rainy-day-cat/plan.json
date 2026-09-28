@@ -1,0 +1,139 @@
+{
+  "character_bank": {
+    "char_a": "Domestic shorthair cat, golden-orange tabby with white paws and a white chest patch. Bright amber eyes. Medium build, soft fluffy fur. About 3 years old. Wears no collar."
+  },
+  "acts": [
+    {
+      "act_id": "act_1",
+      "title": "The Window",
+      "summary": "A golden tabby cat stands before a rain-streaked window, mesmerized by droplets racing down the glass.",
+      "scenes": [
+        {
+          "scene_id": "act_1_scene_1",
+          "location": "Living room window",
+          "time_of_day": "afternoon",
+          "characters": [
+            "char_a"
+          ],
+          "description": "A gentle overcast afternoon. Rain sheets against a large bay window. The orange tabby stands on its hind legs, front paws pressed to the glass, watching droplets cascade downward.",
+          "mood": "wistful, contemplative",
+          "shots": [
+            {
+              "shot_id": "act_1_scene_1_shot_1",
+              "description": "Wide establishing shot of the living room interior. Rain-latticed window dominates the frame. The cat is a small warm shape against the cool blue-grey light from outside.",
+              "characters": [
+                "char_a"
+              ],
+              "camera": {
+                "type": "wide shot",
+                "movement": "static",
+                "lens": "35mm"
+              },
+              "dialogue": "",
+              "duration_seconds": 8,
+              "transition": "cut"
+            },
+            {
+              "shot_id": "act_1_scene_1_shot_2",
+              "description": "Close-up on the cat's paw pressing against the rain-coated glass. Droplets scatter around its white-tipped toes. The reflection of the cat's face is faintly visible in the window.",
+              "characters": [
+                "char_a"
+              ],
+              "camera": {
+                "type": "close-up",
+                "movement": "slow push-in",
+                "lens": "85mm"
+              },
+              "dialogue": "",
+              "duration_seconds": 6,
+              "transition": "cut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "act_id": "act_2",
+      "title": "The Descent",
+      "summary": "The cat trails a single raindrop with its nose and paw, curiosity peaking as it tracks the water's path.",
+      "scenes": [
+        {
+          "scene_id": "act_2_scene_1",
+          "location": "Living room window",
+          "time_of_day": "afternoon",
+          "characters": [
+            "char_a"
+          ],
+          "description": "The cat leans closer, nose almost touching the glass. It follows one particular droplet as it snakes downward, occasionally batting at it with a white paw.",
+          "mood": "playful, enchanted",
+          "shots": [
+            {
+              "shot_id": "act_2_scene_1_shot_1",
+              "description": "Medium close-up of the cat's face in profile. Raindrops blur the background into soft bokeh. Its amber eyes are wide, pupils dilated, reflecting the grey light.",
+              "characters": [
+                "char_a"
+              ],
+              "camera": {
+                "type": "medium close-up",
+                "movement": "static",
+                "lens": "50mm"
+              },
+              "dialogue": "",
+              "duration_seconds": 7,
+              "transition": "dissolve"
+            },
+            {
+              "shot_id": "act_2_scene_1_shot_2",
+              "description": "Extreme close-up of a single raindrop sliding down the glass, the cat's blurred nose and paw visible behind it, batting gently at it.",
+              "characters": [
+                "char_a"
+              ],
+              "camera": {
+                "type": "extreme close-up",
+                "movement": "tilt down following the drop",
+                "lens": "100mm macro"
+              },
+              "dialogue": "",
+              "duration_seconds": 5,
+              "transition": "cut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "act_id": "act_3",
+      "title": "Sleep",
+      "summary": "Exhausted from its vigil, the cat curls onto a plush blanket near the window and drifts off as the rain continues its steady rhythm.",
+      "scenes": [
+        {
+          "scene_id": "act_3_scene_1",
+          "location": "Living room, by the window",
+          "time_of_day": "dusk",
+          "characters": [
+            "char_a"
+          ],
+          "description": "The light has softened to a deep indigo. The cat leaps down from the windowsill and lands silently on a\u539a wool blanket. It circles twice, settles into a tight curl, and its breathing deepens.",
+          "mood": "peaceful, tender",
+          "shots": [
+            {
+              "shot_id": "act_3_scene_1_shot_1",
+              "description": "Wide shot, dimming natural light filtering through the rainy window. The cat curls on a cream-colored blanket. Rain continues to trace paths on the glass. Slow fade to black.",
+              "characters": [
+                "char_a"
+              ],
+              "camera": {
+                "type": "wide shot",
+                "movement": "slow pull-back",
+                "lens": "35mm"
+              },
+              "dialogue": "",
+              "duration_seconds": 10,
+              "transition": "fade to black"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

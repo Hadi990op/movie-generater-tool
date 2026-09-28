@@ -1,0 +1,356 @@
+{
+  "character_bank": {
+    "ELIAS": {
+      "name": "Elias Voss",
+      "locked_look": "70s, gaunt face with deep nasolabial folds, thinning silver hair combed to the side, wiry frame. Wears a charcoal wool cardigan over a cream cotton henley, dark brown corduroy trousers, and worn leather apron. Silver-rimmed magnifying loupe hangs around his neck on a braided cord. Hands are long-fingered, spotted with age, stained faintly with oil."
+    }
+  },
+  "visual_style": "Warm tungsten practical light washes against cold blue rain-slicked darkness, shallow depth of field on close treatments, grainy 35mm texture reminiscent of late-era Kieslowski naturalism.",
+  "acts": [
+    {
+      "act_id": "act_1",
+      "title": "The Workshop at Night",
+      "scenes": [
+        {
+          "scene_id": "act_1_scene_1",
+          "location": "Antique clock repair workshop \u2014 interior, night",
+          "time_of_day": "Night, around 11:47 PM",
+          "characters": [
+            "ELIAS"
+          ],
+          "shot_purpose_summary": "Establish the cramped, artifact-filled workshop and the lonely figure of Elias beneath a pool of warm lamplight, rain visible against the window.",
+          "shots": [
+            {
+              "shot_id": "act_1_scene_1_shot_1",
+              "shot_size": "wide establishing",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "A wide static shot reveals a cluttered workshop crammed with shelves of disassembled clocks, brass gears, and tools. A single amber desk lamp sits center frame. Rain streaks diagonally across a tall arched window on the right. ELIAS, bent over his workbench, is a small dark shape against the warm light pool.",
+              "shot_purpose": "establish",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Rain drumming diagonally against glass, irregular clock ticks from a dozen unmastered timepieces, the faint groan of a pendulum swinging somewhere off-frame, a metal tool clinking softly as Elias shifts his weight",
+              "score": "Near-silent \u2014 a barely perceptible, dissonant drone underneath, like a single cello harmonic bowed too long, evoking isolation and suspended time",
+              "camera": {
+                "type": "wide establishing",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_1_shot_2",
+              "shot_size": "medium",
+              "camera_angle": "low angle",
+              "camera_movement": "slow push in",
+              "lens": "50mm",
+              "action_beat": "The camera slowly pushes toward Elias from across the room. He is hunched over the workbench, back partially to us, one hand holding a brass pendulum steady while the other adjusts a screw with tweezers. Raindrops race down the window behind him.",
+              "shot_purpose": "cover",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Brass pendulum being held still \u2014 a soft metallic resistance sound, tweezers scraping against a tiny screw head, raindrops racing down the window in rivulets, the whisper of Elias's cardigan sleeve against the workbench cloth, a slow exhale",
+              "score": "Sparse, single-note piano figures arrive slowly \u2014 each note spaced like a heartbeat, minor key, barely above the ambience; a subtle bass swell begins as the push-in progresses",
+              "camera": {
+                "type": "medium",
+                "movement": "slow push in",
+                "lens": "50mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_1_shot_3",
+              "shot_size": "close-up",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "85mm",
+              "action_beat": "Extreme tight on Elias's left eye behind the magnifying loupe. His pupil contracts slightly as he focuses. Rain reflections shimmer in the curve of the lens. A thin line of sweat traces from his temple into his collar. He blinks once, slowly.",
+              "shot_purpose": "emotion",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "The wet blink \u2014 a soft, intimate eyelid parting sound; the faintest shift of breath against the loupe glass; a distant thunder roll muffled by the building; the rain reflections on the lens produce almost a shimmering audio texture \u2014 a high, delicate metallic tinkle no more than a whisper",
+              "score": "Solo viola enters \u2014 a single sustained note with slight vibrato, mournful and narrow in range; it holds without resolution, mirroring the static, unblinking focus of the shot",
+              "camera": {
+                "type": "close-up",
+                "movement": "static",
+                "lens": "85mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_1_shot_4",
+              "shot_size": "insert",
+              "camera_angle": "over-the-shoulder",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "Over Elias's right shoulder, the frame fills with the open face of the antique clock on the workbench \u2014 exposed mainspring, brass cogs, and a cracked porcelain dial. His oil-stained fingers move deliberately between components.",
+              "shot_purpose": "detail",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Oil-stained fingertips brushing against brass cogs \u2014 a dry, granular friction; the mainspring's faint tension hum; a gear tooth clicking against another as fingers reposition it; the soft dab of the oil brush approaching from edge of frame",
+              "score": "The viola note fractures into a tremolo \u2014 short, nervous bows suggesting precision under pressure; a muted guitar plucks a recurring three-note figure, mechanical yet human",
+              "camera": {
+                "type": "insert",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": "act_1_scene_2",
+          "location": "Workshop workbench \u2014 same interior, night",
+          "time_of_day": "Night, approximately 12:03 AM",
+          "characters": [
+            "ELIAS"
+          ],
+          "shot_purpose_summary": "Elias works deeper into the clock mechanism; a gear refuses to seat and he applies oil with a fine brush, his movements growing more precise and deliberate.",
+          "shots": [
+            {
+              "shot_id": "act_1_scene_2_shot_1",
+              "shot_size": "wide establishing",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "Wide establishing from the same position as Scene 1's opening \u2014 the cluttered workshop bathed in amber lamplight, rain still streaking the tall arched window on the right. ELIAS is at the workbench, leaning closer to the clock, his charcoal cardigan and leather apron visible. The composition mirrors Scene 1's master, grounding us in the same geography before the scene progresses.",
+              "shot_purpose": "establish",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Rain continues its diagonal streak against glass; the clock on the workbench emits a stronger, more singular tick than the surrounding cacophony \u2014 as if it has become the anchor in the room's temporal chaos; Elias's leather apron creaks as he adjusts his stance",
+              "score": "Returns to the near-silence of the first scene's master \u2014 the dissonant cello drone re-enters, but slightly warmer now, a half-step lower, suggesting accumulated focus",
+              "camera": {
+                "type": "wide establishing",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_2",
+              "shot_size": "medium",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "50mm",
+              "action_beat": "Medium shot from the side. Elias threads a tiny brass pinion into the clock's interior. He tests the engagement \u2014 the gear slips free. He exhales through his nose, sets it down, and reaches for a different tool on the cloth-spattered bench. Camera remains on the same side of the 180-axis as Scene 1 (right of the bench), maintaining consistent screen direction.",
+              "shot_purpose": "cover",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Tiny brass pinion being guided through a aperture \u2014 a soft metallic whisper; the gear slips free with a frustrated tick-tick; a wet exhalation through the nose; the pinion set down on the cloth with a faint clatter; fingers scraping across the cloth-spattered bench searching, then grasping a different tool \u2014 a soft metallic snick",
+              "score": "A brief dissonance \u2014 the piano plays a wrong note, then corrects; the viola responds with a questioning downward slide, as if echoing Elias's own frustration",
+              "camera": {
+                "type": "medium",
+                "movement": "static",
+                "lens": "50mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_3",
+              "shot_size": "close-up",
+              "camera_angle": "low angle",
+              "camera_movement": "slow push in",
+              "lens": "85mm",
+              "action_beat": "Low angle close on Elias's hands. His thumb and forefinger hold a slender oil brush. He dips it into a ceramic dish of watch oil and carefully applies a single glistening drop to the escapement pivot. His hand does not tremble.",
+              "shot_purpose": "detail",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "The oil brush dipping \u2014 a wet, sticky pull from ceramic; the brush tip meeting brass \u2014 a glistening, almost viscous contact sound; the single drop of oil landing on the escapement pivot with a micro-micro click; the steadiness of the hand produces no extraneous movement sounds \u2014 only the deliberate, confident touch",
+              "score": "The music drops out almost entirely for two seconds, leaving only ambience and sfx \u2014 then a solo clarinet enters, clean and warm, playing a simple ascending phrase that mirrors the precision of the oil application; the hand's steadiness gives the music a sense of reverence",
+              "camera": {
+                "type": "close-up",
+                "movement": "slow push in",
+                "lens": "85mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_4",
+              "shot_size": "insert",
+              "camera_angle": "over-the-shoulder",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "Over Elias's right shoulder again, maintaining the same shoulder and axis established in Scene 1's OTS. The gear now catches and turns smoothly. The second hand on the clock face gives a tentative tick forward \u2014 then stops. Elias reaches for the winding key at the base of the clock.",
+              "shot_purpose": "cover",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "The gear catches \u2014 a clean, satisfying metallic engagement; the clock's second hand begins its tentative ticking forward, one click per second, faltering; it stops with a final, dead tick; Elias's fingers reach for the winding key \u2014 leather and metal friction; the key turning in the winding hole with a series of firm, rhythmic clicks",
+              "score": "The ticking of the clock itself becomes percussive under the score \u2014 each tick accenting a brushed snare hit, sparse and ghostly; the clarinet re-enters, now joined by a solo flute playing in counterpoint, both instruments suggesting fragile hope",
+              "camera": {
+                "type": "insert",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_5",
+              "shot_size": "medium",
+              "camera_angle": "high angle",
+              "camera_movement": "tilt up",
+              "lens": "50mm",
+              "action_beat": "High angle looking down at Elias leaning over the clock. He sets the key down and presses his palm flat against the clock's wooden case, listening. The camera tilts up slowly to his face \u2014 his eyes are half-closed, listening intently. His silver-rimmed loupe still hangs around his neck, catching the amber light.",
+              "shot_purpose": "emotion",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "The winding key set down on the bench \u2014 a solid, final click; Elias's palm pressing against the wooden clock case \u2014 a soft thud of flesh on varnished oak; the clock ticking grows subtly louder in the mix, as if heard through the wood and into his body; the loupe around his neck catches and produces a tiny glassy ping as it brushes his collarbone",
+              "score": "The tilt-up from hands to face coincides with a swelling of strings \u2014 cello and viola together, warm and expansive but restrained; the music opens like a breath Elias has been holding; a single high violin harmonic appears near the top of the tilt, catching the amber light sonically",
+              "camera": {
+                "type": "medium",
+                "movement": "tilt up",
+                "lens": "50mm"
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": "act_1_scene_3",
+          "location": "Workshop workbench \u2014 same interior, night",
+          "time_of_day": "Night, approximately 12:18 AM",
+          "characters": [
+            "ELIAS"
+          ],
+          "shot_purpose_summary": "The ticking clock reveals a hidden compartment. Elias pries it open and discovers a yellowed folded note inside.",
+          "shots": [
+            {
+              "shot_id": "act_1_scene_3_shot_1",
+              "shot_size": "wide establishing",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "Wide establishing matching the composition of the previous scenes' opens \u2014 same workshop geography, amber lamp pool, rain on the right window. ELIAS is now leaning very close to the back of the clock, one hand braced on the casing, the loupe swinging slightly from his neck. The shot holds for a beat before he begins running his fingertips along the rear panel.",
+              "shot_purpose": "establish",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "The clock's tick has grown more assertive \u2014 it is no longer competing with the other clocks but commanding attention; the loupe swings gently from Elias's neck, producing tiny glassy clicks against his collarbone; the beat of silence before he begins searching is palpable \u2014 only rain and tick; his fingertips begin dragging across walnut wood \u2014 a dry, searching scratch",
+              "score": "A low, pulsing synth pad enters \u2014 not electronic in texture but organic, like a bowed vibraphone played extremely slowly; it pulses in time with the clock tick, creating an uncanny sense of synchronization between mechanism and mood",
+              "camera": {
+                "type": "wide establishing",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_3_shot_2",
+              "shot_size": "medium",
+              "camera_angle": "eye level",
+              "camera_movement": "handheld follow",
+              "lens": "50mm",
+              "action_beat": "Handheld medium follows Elias as he leans closer to the clock, squinting at the back panel. The ticking is louder now \u2014 steady, rhythmic. He runs his fingertips along the edge of the walnut casing, feeling for irregularities. Camera stays on the same side of the axis (right of bench), preserving screen direction.",
+              "shot_purpose": "cover",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Handheld camera movement adds a subtle fabric rustle \u2014 Elias's cardigan and the leather apron shifting; his squint produces nothing audible but his breath quickens imperceptibly; the ticking grows louder in the mix with each frame, as if the camera is leaning in sonically too; fingertips tracing the walnut edge \u2014 dry, precise, searching scratches; a soft inhale as he feels something",
+              "score": "The pulsing vibraphone-like pad intensifies slightly; a prepared piano enters \u2014 notes struck with felt hammers, producing soft, muffled tones that mirror the tactile searching; the music doesn't yet know what it's looking for either",
+              "camera": {
+                "type": "medium",
+                "movement": "handheld follow",
+                "lens": "50mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_3_shot_3",
+              "shot_size": "insert",
+              "camera_angle": "low angle",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "Low angle insert on Elias's fingers finding a nearly invisible seam along the rear panel. He presses a small brass button disguised as a knot in the wood. A soft click echoes. A thin rectangular compartment door springs outward a quarter-inch.",
+              "shot_purpose": "detail",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Fingertips parting the nearly invisible seam \u2014 a whisper of wood fibers separating; the press against the disguised brass button \u2014 a solid, resonant CLICK that rings slightly louder than it should, as if the clock itself approves; the compartment door springs outward with a sharp, well-oiled SNICK, followed by the faintest hiss of displaced air from within the sealed cavity",
+              "score": "Everything cuts for a fraction of a second \u2014 then a single, bright glockenspiel note strikes, pure and surprised, hanging in the air; the vibraphone pad returns, now in a higher register, shimmering with wonder rather than tension",
+              "camera": {
+                "type": "insert",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_3_shot_4",
+              "shot_size": "close-up",
+              "camera_angle": "eye level",
+              "camera_movement": "slow push in",
+              "lens": "85mm",
+              "action_beat": "Close up on the opened compartment. Inside, wrapped in faded waxed paper, is a narrow folded note. Elias's stained fingers reach in, lift the paper bundle, and begin to unwrap it. The push-in slows as the paper falls away to reveal yellowed paper with dark cursive handwriting.",
+              "shot_purpose": "emotion",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Stained fingers reaching into the compartment \u2014 a soft brush against aged wood; the waxed paper bundle being lifted \u2014 a dry, brittle rustle, paper older than the clock itself; the unwrapping produces a succession of delicate cracks and folds, each one whispered; as the paper falls away, the reveal is almost silent \u2014 only the faintest sigh of paper settling onto the workbench",
+              "score": "The glockenspiel note blooms into a full but restrained string phrase \u2014 strings playing sul tasto, bows close to the fingerboard, creating a veiled, dreamlike warmth; a solo oboe weaves through the strings with a melody that feels like recognition, like something long-awaited finally arriving",
+              "camera": {
+                "type": "close-up",
+                "movement": "slow push in",
+                "lens": "85mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_3_shot_5",
+              "shot_size": "extreme close-up",
+              "camera_angle": "over-the-shoulder",
+              "camera_movement": "static",
+              "lens": "100mm",
+              "action_beat": "Extreme close-up over Elias's right shoulder \u2014 consistent with all prior OTS shots. The note fills most of the frame. The ink reads in flowing script: 'For the one who finds this \u2014 the time was never the problem.' The edges of the paper are frayed and browned. One tear mark runs through the lower right corner. Elias's oil-stained thumb holds the edge of the paper steady.",
+              "shot_purpose": "detail",
+              "characters": [
+                "ELIAS"
+              ],
+              "dialogue": "ELIAS (a whisper, almost inaudible, reading aloud): 'For the one who finds this...' [beat] 'The time was never the problem.'",
+              "ambience": "Low, cavernous workshop bed: a chorus of mismatched clock ticks at varying tempos, rain hissing softly against the tall arched window, distant hum of late-night city traffic three blocks away, occasional low creak of old timber settling",
+              "sfx": "Elias's oil-stained thumb holding the paper steady \u2014 the faintest fabric and paper friction; his breath hitches almost imperceptibly on the reading; the paper's frayed edges produce a barely audible whisper as his thumb shifts; in the background, all the other clocks in the workshop seem to fall silent for a moment \u2014 only the one repaired clock continues its steady tick, as if it alone was meant to deliver this message",
+              "score": "The string phrase resolves to a sustained, open chord \u2014 major but with an added sixth that keeps it from being sentimental; the oboe holds a single long note that slowly fades; the rain continues its quiet percussion outside; the ticking clock remains the only metronomic presence \u2014 the one thing that was always right all along",
+              "camera": {
+                "type": "extreme close-up",
+                "movement": "static",
+                "lens": "100mm"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "name": "Watchmaker's Workshop",
+      "locked_look": "Cramped Victorian-era workshop crammed with towering shelves of brass gears, half-dismantled clocks, and leather tool rolls. Warm amber lamplight pools over a scarred oak workbench. Dark rain-streaked window to one side. Everything coated in fine golden dust."
+    }
+  ],
+  "props": [
+    {
+      "element": "antique clock",
+      "locked_look": "an ornate antique clock with a dark wood casing, brass pendulum, and Roman numeral face, showing visible signs of age and wear"
+    }
+  ]
+}

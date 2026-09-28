@@ -1,0 +1,173 @@
+{
+  "character_bank": {
+    "fisherman": {
+      "name": "Elias",
+      "locked_look": "68-year-old man, silver stubble, deep weathered face, balding with grey side hair, wearing a faded navy wool sweater over a white henley, dark canvas work trousers, worn brown leather boots, and a faded red flat cap. A thin silver wedding band on his left ring finger."
+    },
+    "daughter": {
+      "name": "Maren",
+      "locked_look": "34-year-old woman, shoulder-length chestnut brown hair with subtle grey streaks, sharp kind eyes, wearing a charcoal wool coat over a cream turtleneck, dark slim-fit jeans, and black leather ankle boots. A small silver locket hangs at her throat."
+    }
+  },
+  "visual_style": "Desaturated cold palette with a single warm amber light source; shallow depth of field on close-ups; naturalistic handheld intimacy contrasted with static composed wide shots \u2014 reminiscent of 1970s Scandinavian realism.",
+  "acts": [
+    {
+      "act_id": "act_1",
+      "title": "The Harbor at Dawn",
+      "scenes": [
+        {
+          "scene_id": "act_1_scene_1",
+          "location": "Misty harbor dock, early dawn",
+          "time_of_day": "dawn \u2014 pre-sunrise, blue-grey light with sea fog",
+          "characters": [
+            "fisherman"
+          ],
+          "shot_purpose_summary": "Establish the isolated world of the fisherman and the rhythmic, lonely act of mending.",
+          "shots": [
+            {
+              "shot_id": "act_1_scene_1_shot_1",
+              "shot_size": "wide establishing",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "A stillness shot of the harbor at dawn: wooden dock planks glisten with mist, a lone fishing boat bobs gently against its mooring, and far down the pier a small figure sits hunched over a spread-out net. Sea fog rolls in thick ribbons. Distant gulls call. The world is blue-grey and barely visible beyond ten meters.",
+              "shot_purpose": "establish",
+              "characters": [
+                "fisherman"
+              ],
+              "dialogue": "",
+              "camera": {
+                "type": "wide establishing",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_1_shot_2",
+              "shot_size": "close-up",
+              "camera_angle": "eye level",
+              "camera_movement": "slow push in",
+              "lens": "85mm",
+              "action_beat": "Elias's gnarled hands \u2014 knuckles swollen, skin mapped with old cuts and salt-scars \u2014 work a needle through coarse netting. He pulls the twine tight with practiced force, pauses to wipe his forehead with the back of his wrist, and reaches for a rusted cork bobbin from a tin beside him. His flat cap sits low, shadowing his eyes. Mist curls around his shoulders.",
+              "shot_purpose": "emotion",
+              "characters": [
+                "fisherman"
+              ],
+              "dialogue": "",
+              "camera": {
+                "type": "close-up",
+                "movement": "slow push in",
+                "lens": "85mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_1_shot_3",
+              "shot_size": "medium",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "50mm",
+              "action_beat": "Elias sits on an upturned crate on the dock, back slightly stooped, one hand holding the net taut while the other feeds the needle through. He looks up suddenly \u2014 a distant sound on the fog. He squints toward the harbor entrance. His expression shifts from concentration to wary recognition. He does not stand.",
+              "shot_purpose": "cover",
+              "characters": [
+                "fisherman"
+              ],
+              "dialogue": "",
+              "camera": {
+                "type": "medium",
+                "movement": "static",
+                "lens": "50mm"
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": "act_1_scene_2",
+          "location": "Harbor dock, same dawn",
+          "time_of_day": "dawn \u2014 light beginning to brighten, fog thinning slightly",
+          "characters": [
+            "fisherman",
+            "daughter"
+          ],
+          "shot_purpose_summary": "The daughter enters the frame; the long-awaited reunion unfolds in silence and touch.",
+          "shots": [
+            {
+              "shot_id": "act_1_scene_2_shot_1",
+              "shot_size": "wide establishing",
+              "camera_angle": "eye level",
+              "camera_movement": "static",
+              "lens": "35mm",
+              "action_beat": "Same dock as before, now slightly brighter. Maren appears at the far end of the pier, emerging from the thinning fog, walking toward where Elias sits. The amber light catches the silver locket at her throat. She stops three paces from him. Her breath is visible in the cold air. The half-mended net lies on the wet planks between them.",
+              "shot_purpose": "establish",
+              "characters": [
+                "fisherman",
+                "daughter"
+              ],
+              "dialogue": "Maren: \"Pap.\"",
+              "camera": {
+                "type": "wide establishing",
+                "movement": "static",
+                "lens": "35mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_2",
+              "shot_size": "medium",
+              "camera_angle": "over-the-shoulder",
+              "camera_movement": "static",
+              "lens": "50mm",
+              "action_beat": "From behind Elias's shoulder: Maren stands three paces away, still framing. She opens her mouth as if to speak, then closes it. Elias remains seated, looking up at her. The net lies half-mended between them on the wet planks.",
+              "shot_purpose": "cover",
+              "characters": [
+                "fisherman",
+                "daughter"
+              ],
+              "dialogue": "",
+              "camera": {
+                "type": "medium",
+                "movement": "static",
+                "lens": "50mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_3",
+              "shot_size": "close-up",
+              "camera_angle": "eye level",
+              "camera_movement": "slow push in",
+              "lens": "85mm",
+              "action_beat": "Elias's face in tight frame: the weathered skin, the eyes \u2014 watery blue, rimmed red \u2014 welling. His lower lip trembles once, barely. He does not blink. A single crack of amber light breaks through the fog and lands across one cheek. His hands, still holding the net, loosen their grip.",
+              "shot_purpose": "emotion",
+              "characters": [
+                "fisherman"
+              ],
+              "dialogue": "",
+              "camera": {
+                "type": "close-up",
+                "movement": "slow push in",
+                "lens": "85mm"
+              }
+            },
+            {
+              "shot_id": "act_1_scene_2_shot_4",
+              "shot_size": "medium",
+              "camera_angle": "eye level",
+              "camera_movement": "handheld follow",
+              "lens": "50mm",
+              "action_beat": "Maren crosses the remaining distance in two quick strides and drops to her knees on the wet dock, throwing her arms around Elias's neck. He rises to meet her, one hand cradling the back of her head, the other pressed firmly between her shoulder blades. The net falls to the planks beside them. She buries her face in his shoulder; he closes his eyes and holds her with both arms now, his chin resting against her hair. The harbor sound \u2014 lapping water, distant gull \u2014 fills the silence.",
+              "shot_purpose": "emotion",
+              "characters": [
+                "fisherman",
+                "daughter"
+              ],
+              "dialogue": "",
+              "camera": {
+                "type": "medium",
+                "movement": "handheld follow",
+                "lens": "50mm"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
