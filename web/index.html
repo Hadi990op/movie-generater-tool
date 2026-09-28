@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Movie Generator</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface2: #1a1a26;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --text2: #8888a0;
+    --accent: #7c5cfc;
+    --accent2: #a78bfa;
+    --green: #22c55e;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124,92,252,0.08), transparent),
+      radial-gradient(ellipse 60% 80% at 80% 90%, rgba(236,72,153,0.06), transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .app { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; padding: 24px; }
+  .header { text-align: center; padding: 40px 0 32px; }
+  .header h1 {
+    font-size: 2.5rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), #ec4899);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+  }
+  .header p { color: var(--text2); margin-top: 8px; font-size: 1.05rem; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px; margin-bottom: 24px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #3a3a5a; }
+  .card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .card-title .icon { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text2); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+  textarea, input[type="text"], select {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); color: var(--text); padding: 12px 14px;
+    font-size: 1rem; font-family: inherit; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  textarea { min-height: 120px; resize: vertical; }
+  textarea:focus, input:focus, select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,92,252,0.15); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .btn {
+    padding: 12px 28px; border: none; border-radius: var(--radius-sm);
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-family: inherit;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--accent), #6d28d9); color: white; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(124,92,252,0.3); }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-sm { padding: 8px 16px; font-size: 0.85rem; }
+  .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .progress-bar { width: 100%; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; margin: 16px 0; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #ec4899); border-radius: 3px; transition: width 0.5s ease; width: 0%; }
+  .progress-text { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text2); }
+  .log {
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 16px; max-height: 280px; overflow-y: auto;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.82rem; line-height: 1.7;
+  }
+  .log-entry { display: flex; gap: 10px; }
+  .log-stage { color: var(--accent2); font-weight: 600; min-width: 90px; text-align: right; }
+  .log-msg { color: var(--text); }
+  .log-msg.error { color: var(--red); }
+  .log-msg.success { color: var(--green); }
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 0; }
+  .tab {
+    padding: 10px 20px; background: transparent; border: none; color: var(--text2);
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    border-bottom: 2px solid transparent; transition: all 0.2s; font-family: inherit;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .movie-player {
+    position: relative; background: #000; border-radius: var(--radius);
+    overflow: hidden; aspect-ratio: 16/9; display: flex;
+    align-items: center; justify-content: center;
+  }
+  .movie-player video { width: 100%; height: 100%; object-fit: contain; }
+  .movie-placeholder { color: var(--text2); font-size: 1.2rem; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .movie-placeholder .icon { font-size: 3rem; opacity: 0.3; }
+  .shot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .shot-card {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s; cursor: pointer;
+  }
+  .shot-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .shot-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .shot-card .shot-info { padding: 10px 12px; font-size: 0.8rem; color: var(--text2); display: flex; justify-content: space-between; align-items: center; }
+  .shot-card .shot-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; background: rgba(124,92,252,0.15); color: var(--accent2); }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; }
+  .badge-running { background: rgba(124,92,252,0.15); color: var(--accent2); }
+  .badge-done { background: rgba(34,197,94,0.15); color: var(--green); }
+  .badge-error { background: rgba(239,68,68,0.15); color: var(--red); }
+  .spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 768px) { .row { grid-template-columns: 1fr; } .header h1 { font-size: 1.8rem; } .shot-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); } }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <h1>🎬 AI Movie Generator</h1>
+    <p>Professional multi-shot AI films — location lock, prop lock, sound design</p>
+  </div>
+  <div class="card">
+    <div class="card-title"><div class="icon">🎥</div> New Movie</div>
+    <div class="form-group"><label>Movie Name</label><input type="text" id="movieName" placeholder="my-epic-film"></div>
+    <div class="form-group"><label>Synopsis</label><textarea id="synopsis" placeholder="A lone astronaut discovers an ancient alien artifact on Mars..."></textarea></div>
+    <div class="row">
+      <div class="form-group"><label>Number of Shots</label><input type="number" id="numShots" value="20" min="6" max="50"></div>
+      <div class="form-group"><label>Visual Style</label>
+        <select id="style"><option value="realistic">Cinematic Realistic</option><option value="noir">Film Noir</option><option value="documentary">Documentary</option></select>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="generateBtn" onclick="startGenerate()">🚀 Generate Movie</button>
+  </div>
+  <div class="card" id="jobCard" style="display:none;">
+    <div class="card-title"><div class="icon">⚡</div> Generating... <span class="badge badge-running" id="jobBadge">running</span></div>
+    <div class="progress-text"><span id="progressLabel">Starting...</span><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="log" id="log"></div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('viewer')">🎬 Movie</button>
+    <button class="tab" onclick="switchTab('shots')">🎞️ Shots</button>
+    <button class="tab" onclick="switchTab('plan')">📋 Plan</button>
+  </div>
+  <div class="tab-content active" id="tab-viewer">
+    <div class="movie-player" id="player"><div class="movie-placeholder"><div class="icon">🎬</div><div>Generate a movie to see it here</div></div></div>
+    <div style="margin-top:12px; display:flex; gap:10px;" id="playerActions" hidden>
+      <a class="btn btn-primary btn-sm" id="downloadBtn" download>⬇️ Download MP4</a>
+      <button class="btn btn-outline btn-sm" onclick="document.getElementById('playerVideo').requestFullscreen()">⛶ Fullscreen</button>
+    </div>
+  </div>
+  <div class="tab-content" id="tab-shots">
+    <div class="shot-grid" id="shotGrid"><div class="movie-placeholder" style="grid-column:1/-1;"><div class="icon">🎞️</div><div>Shots will appear here after generation</div></div></div>
+  </div>
+  <div class="tab-content" id="tab-plan">
+    <div class="log" id="planLog" style="max-height:none;"><div class="movie-placeholder" style="padding:40px;"><div class="icon">📋</div><div>Shot plan appears here after generation</div></div></div>
+  </div>
+</div>
+<script>
+const API = '/movie/api';
+let currentJob = null, currentProject = null, pollTimer = null;
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.tab:nth-child(${['viewer','shots','plan'].indexOf(name)+1})`).classList.add('active');
+  document.getElementById(`tab-${name}`).classList.add('active');
+  if (name === 'shots' && currentProject) loadShots(currentProject);
+  if (name === 'plan' && currentProject) loadPlan(currentProject);
+}
+
+async function startGenerate() {
+  const name = document.getElementById('movieName').value.trim();
+  const synopsis = document.getElementById('synopsis').value.trim();
+  const numShots = parseInt(document.getElementById('numShots').value) || 20;
+  const style = document.getElementById('style').value;
+  if (!name || !synopsis) { alert('Name and synopsis required'); return; }
+  const btn = document.getElementById('generateBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Starting...';
+  document.getElementById('jobCard').style.display = '';
+  try {
+    const res = await fetch('/movie/api/generate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ name, synopsis, num_shots: numShots, style })
+    });
+    const data = await res.json();
+    currentJob = data.job_id;
+    currentProject = data.project_name;
+    pollJob(data.job_id);
+  } catch (e) {
+    document.getElementById('log').innerHTML = `<div class="log-entry"><span class="log-msg error">Error: ${e.message}</span></div>`;
+    btn.disabled = false;
+    btn.innerHTML = '🚀 Generate Movie';
+  }
+}
+
+async function pollJob(jobId) {
+  async function tick() {
+    try {
+      const res = await fetch(`/movie/api/status/${jobId}`);
+      const data = await res.json();
+      if (data.error) { updateUI(data, true); return; }
+      updateUI(data);
+      if (data.status === 'done') {
+        currentJob = null;
+        document.getElementById('generateBtn').disabled = false;
+        document.getElementById('generateBtn').innerHTML = '🚀 Generate Movie';
+        showPlayer(currentProject);
+        return;
+      }
+      pollTimer = setTimeout(tick, 3000);
+    } catch(e) { pollTimer = setTimeout(tick, 5000); }
+  }
+  tick();
+}
+
+function updateUI(data, isError) {
+  const fill = document.getElementById('progressFill');
+  const pct = document.getElementById('progressPct');
+  const label = document.getElementById('progressLabel');
+  const log = document.getElementById('log');
+  const badge = document.getElementById('jobBadge');
+  fill.style.width = `${data.progress}%`;
+  pct.textContent = `${data.progress}%`;
+  const lastMsg = data.messages[data.messages.length - 1];
+  label.textContent = lastMsg ? `${lastMsg.stage}: ${lastMsg.message}` : 'Processing...';
+  if (data.status === 'error') {
+    badge.className = 'badge badge-error'; badge.textContent = 'error';
+    label.textContent = `Error: ${data.error}`; pct.textContent = '❌';
+  } else if (data.status === 'done') {
+    badge.className = 'badge badge-done'; badge.textContent = 'done';
+  }
+  log.innerHTML = data.messages.map(m =>
+    `<div class="log-entry"><span class="log-stage">${m.stage}</span><span class="log-msg${m.stage.includes('error') ? ' error' : ''}">${m.message}</span></div>`
+  ).join('');
+  log.scrollTop = log.scrollHeight;
+}
+
+function showPlayer(project) {
+  const player = document.getElementById('player');
+  const actions = document.getElementById('playerActions');
+  player.innerHTML = `<video id="playerVideo" controls autoplay><source src="/movie/api/projects/${project}/play" type="video/mp4"></video>`;
+  actions.hidden = false;
+  document.getElementById('downloadBtn').href = `/movie/api/projects/${project}/play`;
+}
+
+async function loadShots(project) {
+  try {
+    const res = await fetch(`/movie/api/projects/${project}/shots`);
+    const shots = await res.json();
+    const grid = document.getElementById('shotGrid');
+    if (!shots.length) { grid.innerHTML = '<div class="movie-placeholder" style="grid-column:1/-1;"><div class="icon">🎞️</div><div>No shots yet</div></div>'; return; }
+    grid.innerHTML = shots.map(s => `
+      <div class="shot-card" onclick="viewShot('${project}','${s.shot_id}')">
+        <img src="/movie/api/projects/${project}/shot/${s.shot_id}" alt="${s.shot_id}" loading="lazy">
+        <div class="shot-info"><span>${s.shot_id}</span><span class="shot-badge">${s.video ? '▶ video' : '🖼 image'}</span></div>
+      </div>
+    `).join('');
+  } catch(e) { console.error('loadShots:', e); }
+}
+
+async function loadPlan(project) {
+  try {
+    const res = await fetch(`/movie/api/projects/${project}/plan.json`);
+    const plan = await res.json();
+    document.getElementById('planLog').innerHTML = `<pre style="white-space:pre-wrap;font-family:inherit;font-size:0.9rem;line-height:1.8;color:var(--text);">${JSON.stringify(plan, null, 2)}</pre>`;
+  } catch(e) {
+    document.getElementById('planLog').innerHTML = `<div class="log-msg error">Could not load plan.json</div>`;
+  }
+}
+
+function viewShot(project, shotId) {
+  const player = document.getElementById('player');
+  const actions = document.getElementById('playerActions');
+  const videoSrc = `/movie/api/projects/${project}/play/${shotId}`;
+  player.innerHTML = `<video id="playerVideo" controls autoplay><source src="${videoSrc}" type="video/mp4">Your browser does not support video.</video>`;
+  actions.hidden = false;
+  document.getElementById('downloadBtn').href = videoSrc;
+  switchTab('viewer');
+}
+window.viewShot = viewShot;
+window.switchTab = switchTab;
+</script>
+</body>
+</html>
