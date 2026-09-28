@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+projects/
+keys.json
+keys_ledger.json
+projects_db.json
+*.mp4
+*.part
+*.log
+web_app.log
