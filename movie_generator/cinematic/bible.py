@@ -61,7 +61,10 @@ class AssetRegistry:
         return [a for a in self.assets.values() if a["type"] == asset_type]
 
     def find_by_name(self, name: str) -> Optional[dict]:
-        name_l = name.lower()
+        """Match on name, persistent ID (PROP-WATCH-01), or substring of name."""
+        name_l = (name or "").lower()
+        if name_l in self.assets:
+            return self.assets[name_l]
         for a in self.assets.values():
             if a["name"].lower() == name_l or name_l in a["name"].lower():
                 return a

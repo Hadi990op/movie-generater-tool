@@ -68,25 +68,16 @@ class ProductionPipeline:
     def init_bible(self, **fields) -> dict:
         """PHASE 0: project/asset bible. Register characters/locations/props."""
         self.bible.set(mode=fields.pop("mode", "cinematic"), **fields)
-        chars = fields.get("characters") or []
-        if isinstance(chars, list):
-            for c in chars:
-                if isinstance(c, dict):
-                    self.registry.register("CHARACTER", c.get("name", "Unknown"), **c)
-                elif isinstance(c, str):
-                    self.registry.register("CHARACTER", c)
-        locs = fields.get("locations") or []
-        for l in locs:
-            if isinstance(l, dict):
-                self.registry.register("LOCATION", l.get("name", "Unknown"), **l)
-            elif isinstance(l, str):
-                self.registry.register("LOCATION", l)
-        props = fields.get("props") or []
-        for p in props:
-            if isinstance(p, dict):
-                self.registry.register("PROP", p.get("name", "Unknown"), **p)
-            elif isinstance(p, str):
-                self.registry.register("PROP", p)
+        for asset_type, key in (("CHARACTER", "characters"),
+                                ("LOCATION", "locations"), ("PROP", "props")):
+            items = fields.get(key) or []
+            for it in items:
+                if isinstance(it, dict):
+                    d = dict(it)
+                    name = d.pop("name", "Unknown")
+                    self.registry.register(asset_type, name, **d)
+                elif isinstance(it, str):
+                    self.registry.register(asset_type, it)
         return self.bible.data
 
     # ------------------------------------------------------------- phase 1+2
