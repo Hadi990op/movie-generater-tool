@@ -13,8 +13,8 @@ from typing import Optional
 
 import requests
 
-BASE_URL = "https://api.agnes.ai/v1"
-POLL_URL = "https://api.agnes.ai/videos/status"
+BASE_URL = "https://apihub.agnes-ai.com/v1"
+POLL_URL = "https://apihub.agnes-ai.com/agnesapi"
 MAX_ATTEMPTS = 3
 DEFAULT_VIDEO_RPM = 10
 VIDEO_DAILY_SECONDS = 1000.0
@@ -191,10 +191,12 @@ class AgnesClient:
 
     # --------------------------------------------------------------- image
     def image(self, prompt: str, size: str = "1280x720", model: str = "agnes-image-2.1-flash",
-              retries: int = MAX_ATTEMPTS) -> dict:
+              retries: int = MAX_ATTEMPTS, image_url: str | None = None) -> dict:
         if model not in MODELS["image"]:
             raise ValueError(f"Unknown image model: {model}")
         body = {"model": model, "prompt": prompt, "size": size}
+        if image_url:
+            body["image_url"] = image_url
         last_err = None
         for _ in range(retries):
             try:

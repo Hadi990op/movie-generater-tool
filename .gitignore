@@ -8,3 +8,5 @@ projects_db.json
 *.part
 *.log
 web_app.log
+__pycache__/
+projects/

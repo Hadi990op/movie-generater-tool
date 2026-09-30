@@ -15,6 +15,7 @@ from pydantic import BaseModel
 
 from movie_generator.agnes_client import AgnesClient
 from movie_generator.pipeline import MovieGenerator
+from movie_generator.cinematic.api import production_router
 
 WEB_DIR = Path(__file__).parent / "web"
 PROJECTS_DIR = Path(__file__).parent / "projects"
@@ -22,6 +23,7 @@ WEB_DIR.mkdir(exist_ok=True)
 PROJECTS_DIR.mkdir(exist_ok=True)
 
 app = FastAPI(title="AI Movie Generator")
+app.include_router(production_router, prefix="/api/production")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -266,4 +268,4 @@ async def get_plan(name: str):
     return JSONResponse({"error": "Plan not found"}, status_code=404)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8090)
+    uvicorn.run(app, host="0.0.0.0", port=9010)
