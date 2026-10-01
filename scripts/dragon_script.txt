@@ -1,0 +1,1874 @@
+SCENE 01
+TITLE: The Fall
+LOCATION: Rocky mountainside above a green valley
+TIME: Late afternoon
+WEATHER: Clear, cold wind
+SCENE_DURATION: 50
+
+SHOT 01-01
+DURATION: 6
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: LYRA
+ACTION: Girl in simple medieval clothing running along a high rocky mountain ridge, loose stones sliding under her boots
+START_STATE: Girl running along ridge, loose stones sliding
+END_STATE: Girl reaches the ridge edge, the ground crumbles beneath her
+SFX: wind, sliding rocks, breathing
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 01-02
+DURATION: 2
+LENS: 35mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: LYRA
+ACTION: Ridge edge collapses, girl loses her footing and begins to fall
+START_STATE: Ground crumbling beneath the girl
+END_STATE: Girl falling backward off the ridge
+SFX: rock crack, sharp gasp
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: LYRA
+
+SHOT 01-03
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: LYRA
+ACTION: Girl tumbling down the steep slope, grabbing at rocks that crumble in her hands
+START_STATE: Girl falling down the slope
+END_STATE: Girl sliding toward dense bushes below
+SFX: tumbling, tearing cloth
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: LYRA
+
+SHOT 01-04
+DURATION: 3
+LENS: 50mm
+FRAMING: close-up
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: LYRA
+ACTION: Girl crashes through bushes and branches, leaves and twigs tearing past her, slow deceleration
+START_STATE: Girl crashing into bushes
+END_STATE: Girl comes to rest at the bottom of the slope among branches
+SFX: branches snapping, muffled impacts
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: LYRA
+
+SHOT 01-05
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: Girl lying among bushes, breathing hard, slowly opening her eyes, dirt and scratches on her face
+START_STATE: Girl motionless among bushes
+END_STATE: Girl lifts her head slightly, notices something ahead
+SFX: hard breathing, birdsong distant
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 01-06
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: From behind the girl, across a clearing below, hunters with medieval weapons surrounding a great dragon
+START_STATE: Girl's POV over the clearing, hunters and a dragon visible in the distance
+END_STATE: Girl stays hidden, watching
+SFX: distant shouting, dragon low growl
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-MOTHER, HUNTER
+
+SCENE 02
+TITLE: The Attack
+LOCATION: Green clearing below the ridge
+TIME: Late afternoon
+WEATHER: Clear
+SCENE_DURATION: 55
+
+SHOT 02-01
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: LOCKED
+CHARACTERS: DRAGON-MOTHER, HUNTER
+ACTION: Hunters surrounding a great dragon in a clearing, closing in from several sides, dragon spreading its wings defensively
+START_STATE: Hunters closing in around the dragon
+END_STATE: First hunter raises his crossbow
+SFX: shouting, wing beats, chain rattle
+MUSIC: low tense strings begin
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-MOTHER, HUNTER, WIFE
+
+SHOT 02-02
+DURATION: 2
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: HUNTER
+ACTION: Hunter raises his heavy crossbow and aims at the dragon
+START_STATE: Crossbow raised, aimed
+END_STATE: Bolt loosed
+SFX: crossbow twang
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SHOT 02-03
+DURATION: 1
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: DRAGON-MOTHER
+ACTION: Arrow strikes the dragon's shoulder, the dragon recoils with a sharp roar, no graphic blood
+START_STATE: Arrow hits dragon's shoulder
+END_STATE: Dragon recoils roaring
+SFX: impact thud, roar
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-MOTHER
+
+SHOT 02-04
+DURATION: 2
+LENS: 35mm
+FRAMING: wide
+CAMERA: STATIC
+CHARACTERS: DRAGON-MOTHER, HUNTER
+ACTION: More hunters loose arrows in unison, several strike the dragon, it staggers but stays standing
+START_STATE: Arrows flying toward the dragon
+END_STATE: Dragon staggered, wounded, still upright
+SFX: multiple impacts
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-MOTHER, HUNTER
+
+SHOT 02-05
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-MOTHER
+ACTION: The dragon's eye, wide with pain and defiance, slowly dims as its strength fails
+START_STATE: Dragon's eye wide with pain
+END_STATE: Dragon's head begins to lower
+SFX: weakening breath
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-MOTHER
+
+SHOT 02-06
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: DRAGON-MOTHER
+ACTION: The great dragon collapses to the ground with a heavy final breath, dust rising, no graphic gore
+START_STATE: Dragon falling
+END_STATE: Dragon lies still, dust settling
+SFX: heavy collapse, dust
+MUSIC: strings stop abruptly
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-MOTHER
+
+SHOT 02-07
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_TRACK
+CHARACTERS: HUNTER, WIFE
+ACTION: Hunters lowering weapons, one hunter stepping forward to inspect the fallen dragon, his wife watching from behind
+START_STATE: Weapons lowered, hunters relaxed
+END_STATE: Hunter kneels beside the dragon
+SFX: footsteps, relaxed breathing
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER, WIFE
+
+SHOT 02-08
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: HUNTER
+ACTION: Hunters taking scales and trophies from the dragon, working methodically, then packing up
+START_STATE: Hunters kneeling at the dragon
+END_STATE: Hunters turning to leave the clearing
+SFX: scale cutting, pack rustle
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SHOT 02-09
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: HUNTER
+ACTION: Hunters walking away along the trail, leaving the clearing empty except for the fallen dragon
+START_STATE: Hunters walking away
+END_STATE: Clearing empty, dragon still
+SFX: footsteps fading, wind
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: HUNTER
+
+SCENE 03
+TITLE: The Baby
+LOCATION: Clearing and dragon's side
+TIME: Late afternoon
+WEATHER: Clear
+SCENE_DURATION: 55
+
+SHOT 03-01
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SHOULDER_FOLLOW
+CHARACTERS: LYRA
+ACTION: Girl creeping out of the bushes toward the clearing, moving carefully, frightened
+START_STATE: Girl emerging from bushes
+END_STATE: Girl reaches the edge of the clearing
+SFX: careful footsteps, breathing
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 03-02
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: LYRA, DRAGON-MOTHER
+ACTION: Girl approaching the enormous fallen dragon, dwarfed by its size
+START_STATE: Girl at the clearing edge
+END_STATE: Girl beside the dragon's head
+SFX: wind, dragon faint breath
+MUSIC: subtle mournful cello begins
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-MOTHER
+
+SHOT 03-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-MOTHER
+ACTION: The dragon's eye, barely alive, flickers and opens just a sliver
+START_STATE: Dragon's eye closed
+END_STATE: Eye half-open, faint light in it
+SFX: faint breath
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-MOTHER
+
+SHOT 03-04
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl startles, her foot catches on something soft, she looks down
+START_STATE: Girl standing beside the dragon
+END_STATE: Girl looking down at the dragon's wing
+SFX: small gasp
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 03-05
+DURATION: 5
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-BABY
+ACTION: Beneath the dragon's wing, a tiny newly-hatched baby dragon with big emotional eyes, hiding under its mother's wing
+START_STATE: Baby dragon revealed under the wing
+END_STATE: Baby looks up at the girl
+SFX: tiny chirp
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 03-06
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl's face, tears forming, looking at the baby dragon
+START_STATE: Girl looking at baby
+END_STATE: Girl reaches out slowly
+SFX: soft breathing
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 03-07
+DURATION: 5
+LENS: 85mm
+FRAMING: close-up
+CAMERA: LOCKED
+CHARACTERS: DRAGON-MOTHER
+ACTION: The dragon mother's eye closes for the last time, her breath stops, a quiet sad moment
+START_STATE: Eye half-open
+END_STATE: Eye closed, still
+SFX: last breath, silence
+MUSIC: cello stops
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-MOTHER
+
+SHOT 03-08
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl kneeling beside the baby dragon, both still, mourning the mother
+START_STATE: Girl kneeling with baby
+END_STATE: Distant shouting heard, girl freezes
+SFX: distant shouting
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 03-09
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: Girl hears the hunters returning, her face fills with fear, a vision of the baby's eyes and the mother's last moment passes over her, she thinks for a moment
+START_STATE: Girl frozen, listening
+END_STATE: Girl makes her decision, reaches for the baby
+SFX: approaching shouts
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SCENE 04
+TITLE: The Rescue
+LOCATION: Clearing and trail
+TIME: Late afternoon
+WEATHER: Clear
+SCENE_DURATION: 45
+
+SHOT 04-01
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl scoops up the baby dragon, wrapping it inside her shawl against her chest
+START_STATE: Girl reaching for baby
+END_STATE: Baby hidden inside her shawl
+SFX: cloth wrapping, chirp
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 04-02
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: SHOULDER_FOLLOW
+CHARACTERS: LYRA
+ACTION: Girl hurrying away along the trail, one hand steadying the bundle at her chest
+START_STATE: Girl moving down the trail
+END_STATE: Girl slows, glances back
+SFX: hurried footsteps
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 04-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: DRAGON-BABY
+ACTION: Baby dragon's face peeking out from the shawl, big emotional eyes blinking at the sky
+START_STATE: Baby face peeking from shawl
+END_STATE: Baby settles back into the shawl
+SFX: soft chirp
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 04-04
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Flashback, brief: the girl wrapping the baby into her shawl, the same rescue seen again as memory
+START_STATE: Flashback of wrapping the baby
+END_STATE: Flashback fades
+SFX: muffled memory tone
+MUSIC: none
+TRANSITION: dissolve
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 04-05
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: LYRA
+ACTION: Girl walking away from the mountains toward the valley village, the bundle at her chest
+START_STATE: Girl walking toward the village
+END_STATE: Village rooftops visible ahead
+SFX: wind, footsteps
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SCENE 05
+TITLE: The Village
+LOCATION: Village lanes and cottage
+TIME: Early evening
+WEATHER: Clear
+SCENE_DURATION: 50
+
+SHOT 05-01
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Medieval village of wooden and stone cottages, girl entering the lane looking anxious and hurried
+START_STATE: Girl entering the village lane
+END_STATE: Girl hurrying toward her cottage
+SFX: village ambience, chickens
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 05-02
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: SHOULDER_FOLLOW
+CHARACTERS: LYRA, AGNES
+ACTION: A village lady steps into her path, the girl slows
+START_STATE: Lady blocking the lane
+END_STATE: Lady speaks
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: You look frightened, what happened?
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, AGNES
+
+SHOT 05-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl forces a calm face, lying quickly
+START_STATE: Girl composing herself
+END_STATE: Girl turns to go
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: No no, I'm fine. Just a chill coming on, that's all.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 05-04
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The lady watches her with a small suspicious look
+START_STATE: Lady suspicious
+END_STATE: Girl walking away
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 05-05
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: AGNES
+ACTION: The lady stands in the lane watching the girl until she disappears into her cottage
+START_STATE: Lady watching from lane
+END_STATE: Cottage door closes
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 05-06
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl inside her cottage, closing the door quickly, then the window shutters
+START_STATE: Door closing
+END_STATE: Shutters closed, room dim
+SFX: door thud, shutter clatter
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SCENE 06
+TITLE: First Night
+LOCATION: Inside the cottage
+TIME: Evening into night
+WEATHER: Clear
+SCENE_DURATION: 55
+
+SHOT 06-01
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl unwraps the baby dragon from her shawl and holds it up, looking at it with wonder
+START_STATE: Baby unwrapped
+END_STATE: Baby in her hands, firelight
+SFX: chirp, fire crackle
+MUSIC: gentle motif begins
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 06-02
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl bathing the baby dragon gently with warm water from a basin, like bathing an infant, baby splashing weakly
+START_STATE: Basin of warm water beside the fire
+END_STATE: Baby cleaned, wrapped in cloth again
+SFX: water, soft chirps
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 06-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: DRAGON-BABY
+ACTION: Girl offering the baby a piece of bread, the baby turns its head away, does not eat
+START_STATE: Bread offered
+END_STATE: Baby refusing, head turned
+SFX: soft chirp refusal
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 06-04
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl offers berries, then cheese, the baby refuses everything
+START_STATE: More food offered
+END_STATE: Girl understands, thinking
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: You don't eat that... do you.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 06-05
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: Girl realizes what the baby needs, resolve forming
+START_STATE: Girl thinking by the fire
+END_STATE: Girl stands, reaches for her shawl
+SFX: fire crackle
+MUSIC: motif stops
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 06-06
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl hides the baby in a wooden crate under a blanket and steps out of the cottage
+START_STATE: Baby hidden in crate
+END_STATE: Door closing behind her
+SFX: blanket rustle, door
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SCENE 07
+TITLE: The Ring
+LOCATION: Butcher's shop, village lane
+TIME: Evening
+WEATHER: Clear
+SCENE_DURATION: 55
+
+SHOT 07-01
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Small butcher's shop with hanging carcasses and lantern light, girl entering
+START_STATE: Girl entering the shop
+END_STATE: Girl at the counter
+SFX: shop ambience, cleaver on block
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 07-02
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Girl asking for a large piece of meat at the counter
+START_STATE: Girl at the counter
+END_STATE: Butcher wraps the meat
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: A large piece. However much this buys.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 07-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl takes off her ring and places it on the counter instead of coins
+START_STATE: Ring on the counter
+END_STATE: Butcher stares at the ring
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 07-04
+DURATION: 5
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: Flashback, emotional: the girl's husband placing the ring on her finger, warm memory light
+START_STATE: Flashback of the ring being given
+END_STATE: Flashback fades to present
+SFX: memory tone
+MUSIC: gentle sad motif
+TRANSITION: dissolve
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 07-05
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Present: girl takes the large piece of meat and leaves the shop
+START_STATE: Meat wrapped, girl taking it
+END_STATE: Girl walking out
+SFX: door, footsteps
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 07-06
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The same village woman watching from across the lane, a strange suspicious and surprised look, alone and carrying such a large piece of meat
+START_STATE: Lady watching from distance
+END_STATE: Lady frowning slightly
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 07-07
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl home, offering the meat to the baby dragon, the baby eats eagerly, a happy warm moment
+START_STATE: Meat offered
+END_STATE: Baby eating, girl smiling with tears
+SFX: eager eating, chirps
+MUSIC: warm motif
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SCENE 08
+TITLE: Growing
+LOCATION: Inside the cottage
+TIME: Night to morning
+WEATHER: Clear
+SCENE_DURATION: 45
+
+SHOT 08-01
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_TRACK
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl lying on her bed with the baby dragon curled against her chest, both falling asleep, eyes closing
+START_STATE: Both settling to sleep
+END_STATE: Both asleep, fire dying down
+SFX: soft breathing, fire crackle fading
+MUSIC: gentle lullaby motif
+TRANSITION: dissolve
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 08-02
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Morning light through the window, girl asleep, a wing lying across her face, she wakes startled
+START_STATE: Girl asleep, wing on her face
+END_STATE: Girl sits up startled
+SFX: birdsong, gasp
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 08-03
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: DRAGON-BABY
+ACTION: Reveal: the baby dragon has grown larger overnight, noticeably bigger than before, it wakes and stretches
+START_STATE: Dragon waking, larger
+END_STATE: Girl hugs the dragon
+SFX: wing stretch, chirp
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-BABY, LYRA
+
+SHOT 08-04
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl hugs the dragon's neck, wonder and worry mixed on her face
+START_STATE: Girl hugging dragon
+END_STATE: Scene fades
+SFX: soft breathing
+MUSIC: none
+TRANSITION: dissolve
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SCENE 09
+TITLE: Rain
+LOCATION: Village lane, butcher's shop
+TIME: Morning
+WEATHER: Rain, dark clouds
+SCENE_DURATION: 55
+
+SHOT 09-01
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: LOCKED
+CHARACTERS: none
+ACTION: Grey rain clouds over the village, steady rain, dark but not stormy, muddy lane with puddles
+START_STATE: Steady rain over the village
+END_STATE: Cottage door opens
+SFX: rain, dripping eaves
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+
+SHOT 09-02
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Girl puts on her hooded cloak and steps out, splashing through puddles
+START_STATE: Girl in cloak in the rain
+END_STATE: Girl walking down the lane
+SFX: rain, splashing footsteps
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 09-03
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: SHOULDER_FOLLOW
+CHARACTERS: LYRA
+ACTION: Girl walking the muddy rainy lane, hood up, holding the meat parcel under her cloak
+START_STATE: Girl walking through mud and water
+END_STATE: Girl reaching the butcher's shop
+SFX: rain steady
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 09-04
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Girl taking meat at the counter, the butcher refusing her ring this time, waving it away kindly
+START_STATE: Girl at the counter
+END_STATE: Butcher speaks
+DIALOGUE_SPEAKER: none
+DIALOGUE: Keep your ring. I know something is going on with you.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 09-05
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl's face, quiet emotion, looking down
+START_STATE: Girl emotional at the counter
+END_STATE: Girl turning to leave
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 09-06
+DURATION: 5
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: Flashback, emotional: her husband the soldier in uniform holding her hands in the same lane, saying he will return soon from the war the king ordered
+START_STATE: Flashback begins, husband and wife holding hands
+END_STATE: Flashback fades
+DIALOGUE_SPEAKER: none
+DIALOGUE: I'll be back soon. The king has ordered it, I must go.
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 09-07
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Present, same rainy morning: girl walking home through the rain with the meat
+START_STATE: Girl walking home in rain
+END_STATE: The lady watching her from the lane
+SFX: rain
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SCENE 10
+TITLE: Questions
+LOCATION: Village lane
+TIME: Morning, rain
+WEATHER: Rain
+SCENE_DURATION: 55
+
+SHOT 10-01
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: AGNES, LYRA
+ACTION: The lady steps close to the girl in the rain, blocking her way
+START_STATE: Lady close to the girl
+END_STATE: Lady speaks
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: You live alone. Why do you buy so much meat every day?
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES, LYRA
+
+SHOT 10-02
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl flustered, explaining quickly that she fell from the mountain and is recovering from wounds
+START_STATE: Girl composing a lie
+END_STATE: Girl turns to go
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: I fell from the mountain. I'm still recovering. The meat is for my recovery.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 10-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The lady looks at her with a strange suspicious look, says nothing
+START_STATE: Lady suspicious
+END_STATE: Girl hurrying away
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 10-04
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The lady stands in the rain watching the girl hurry away, until the cottage door closes behind her
+START_STATE: Lady watching
+END_STATE: Door closes
+SFX: rain, door
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 10-05
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Girl home, feeding the meat to the baby dragon, the routine continuing
+START_STATE: Meat offered
+END_STATE: Baby eating
+SFX: eating, rain on roof
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SCENE 11
+TITLE: The Roof
+LOCATION: Cottage and village lane
+TIME: Day, rain ending
+WEATHER: Rain thinning
+SCENE_DURATION: 60
+
+SHOT 11-01
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: LOCKED
+CHARACTERS: LYRA
+ACTION: Girl walking home with the meat, the cottage roof visibly creaking and buckling in the middle
+START_STATE: Girl approaching home
+END_STATE: Girl freezes, staring at the roof
+SFX: wood creaking
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 11-02
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: LYRA
+ACTION: Girl hurries inside, frightened
+START_STATE: Girl rushing through the door
+END_STATE: Girl inside, staring upward
+SFX: door, quick steps
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 11-03
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TILT
+CHARACTERS: DRAGON-BABY
+ACTION: Reveal: the dragon has grown large, it is pushing against the roof from inside, that is why the roof was breaking
+START_STATE: Dragon pushing the roof beams
+END_STATE: Girl sits down in front of it, calming it
+SFX: wood groaning, low growl
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-BABY, LYRA
+
+SHOT 11-04
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: AGNES
+ACTION: From a neighbouring house, the lady stands on her porch and sees the cottage roof breaking, a strange smile crosses her face
+START_STATE: Lady watching from her porch
+END_STATE: Lady speaks
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: I'll catch you now.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 11-05
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl repairing the cottage roof, hammering planks
+START_STATE: Girl on the roof repairing
+END_STATE: Scene fades
+SFX: hammering
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SCENE 12
+TITLE: The Hunter's House
+LOCATION: Inside the hunter's house
+TIME: Evening
+WEATHER: Clear
+SCENE_DURATION: 55
+
+SHOT 12-01
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_TRACK
+CHARACTERS: AGNES
+ACTION: Inside the hunter's house, the lady standing, seen from behind and side profile, facing a seated man cleaning a large crossbow, his face not yet shown
+START_STATE: Lady facing the seated man
+END_STATE: Lady speaks
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: I think something is going on in that girl's house.
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: AGNES, HUNTER
+
+SHOT 12-02
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_TRACK
+CHARACTERS: AGNES
+ACTION: Camera moving slowly behind and beside the lady as she tells about the loud bump inside the girl's cottage that broke the roof
+START_STATE: Camera circling behind the lady
+END_STATE: Lady continues
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: There was a great bump inside her cottage. It broke her roof from within.
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: AGNES
+
+SHOT 12-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The lady says she thinks the girl is keeping a dragon
+START_STATE: Lady about to say it
+END_STATE: Camera moves to the man's hands
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: I think she is keeping a dragon.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 12-04
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: HUNTER
+ACTION: Close-up on the man's hands cleaning the crossbow, the hands stop suddenly
+START_STATE: Hands cleaning the crossbow
+END_STATE: Hands frozen
+SFX: cloth on wood stops
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: HUNTER
+
+SHOT 12-05
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: HUNTER
+ACTION: The man says one word, quiet
+START_STATE: Man's mouth about to speak
+END_STATE: Silence after the word
+DIALOGUE_SPEAKER: HUNTER
+DIALOGUE: Dragon...
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: HUNTER
+
+SHOT 12-06
+DURATION: 5
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: HUNTER
+ACTION: Reveal: the man's face, he is the hunter who killed the dragon mother at the start, flashbacks of him attacking the dragon
+START_STATE: Hunter's face revealed
+END_STATE: Flashback of the attack fades
+SFX: memory tone
+MUSIC: none
+TRANSITION: dissolve
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SHOT 12-07
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: AGNES, HUNTER
+ACTION: The lady calls him husband, revealing they are married
+START_STATE: Lady facing the hunter
+END_STATE: He takes her hand
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: Husband. Listen to me.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES, HUNTER
+
+SCENE 13
+TITLE: Stones at the Door
+LOCATION: Girl's cottage
+TIME: Night
+WEATHER: Clear, cold
+SCENE_DURATION: 65
+
+SHOT 13-01
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl standing inside her cottage when small stones suddenly strike her door, she startles in fear
+START_STATE: Stones hitting the door
+END_STATE: Girl backing away from the door
+SFX: stones on wood, gasp
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 13-02
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: LOCKED
+CHARACTERS: AGNES, HUNTER
+ACTION: Outside, the lady, her husband the hunter, and the villagers gathered at the girl's door, the lady holding a stone
+START_STATE: Mob gathered at the door
+END_STATE: Lady shouts
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: Come out!
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: AGNES, HUNTER
+
+SHOT 13-03
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA, DRAGON-BABY
+ACTION: Inside, the girl telling the dragon to hide, wrapping it in a large cloth and hiding it in a dark corner
+START_STATE: Girl wrapping the dragon
+END_STATE: Dragon hidden under cloth
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: Hide. Don't come out, no matter what.
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA, DRAGON-BABY
+
+SHOT 13-04
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl steps outside, frightened underneath but showing confusion, asking why they are throwing stones at her house
+START_STATE: Girl outside facing the mob
+END_STATE: Villager shouts
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: Why are you doing this? What is happening?
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 13-05
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The lady asks where the dragon is
+START_STATE: Lady demanding
+END_STATE: Girl answers
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: Where is the dragon?
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: AGNES
+
+SHOT 13-06
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl answering as if she knows nothing
+START_STATE: Girl denying
+END_STATE: Lady speaks again
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: Dragon? What dragon?
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 13-07
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The lady says she saw it, a brief flash of the past night, the lady secretly watching through the window as the large dragon slept with the girl beside it on the bed
+START_STATE: Lady claiming she saw it
+END_STATE: Girl denies again
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: I saw it. Last night, through your window.
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: AGNES
+
+SHOT 13-08
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl insisting it is a lie, saying it to everyone
+START_STATE: Girl denying to the crowd
+END_STATE: Lady grabs her hair
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: It's a lie. All of it is a lie.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 13-09
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: AGNES, LYRA
+ACTION: The lady grabs the girl by her hair and drags her toward the crowd, slaps her, demands she bring the dragon out
+START_STATE: Lady dragging the girl
+END_STATE: Girl crying
+DIALOGUE_SPEAKER: AGNES
+DIALOGUE: Bring it out!
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: AGNES, LYRA
+
+SHOT 13-10
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: Girl crying, begging them not to hurt it
+START_STATE: Girl crying
+END_STATE: Hunters push into the cottage
+DIALOGUE_SPEAKER: LYRA
+DIALOGUE: Don't touch it, please.
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 13-11
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: SHOULDER_FOLLOW
+CHARACTERS: HUNTER
+ACTION: The hunter and one or two companions pushing into the cottage, searching everywhere, finding nothing
+START_STATE: Hunters searching inside
+END_STATE: Hunters emerging frustrated
+SFX: furniture thrown, wood clatter
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SHOT 13-12
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: STATIC
+CHARACTERS: HUNTER
+ACTION: The frustrated hunter grabs the girl by the face and demands to know where it is, her tears falling
+START_STATE: Hunter gripping the girl's face
+END_STATE: Butcher arrives
+DIALOGUE_SPEAKER: HUNTER
+DIALOGUE: Where is it?
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER, LYRA
+
+SHOT 13-13
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: none
+ACTION: The butcher arrives at the commotion and tries to protect the girl, telling them to let her go
+START_STATE: Butcher stepping between them
+END_STATE: Hunter's men grab the butcher
+DIALOGUE_SPEAKER: none
+DIALOGUE: Let her go. What is this spectacle?
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SHOT 13-14
+DURATION: 2
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: HUNTER
+ACTION: The hunter's men strike the butcher's knee with a weapon, he falls to his knees, then a heavy blow, a companion standing over him with a crossbow
+START_STATE: Men striking the butcher
+END_STATE: Butcher down
+SFX: heavy blows
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: HUNTER
+
+SHOT 13-15
+DURATION: 2
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: HUNTER, LYRA
+ACTION: The hunter shouts and slaps the girl hard, she falls to the ground
+START_STATE: Hunter raising his hand
+END_STATE: Girl on the ground
+SFX: slap, cry out
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: HUNTER, LYRA
+
+SHOT 13-16
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-BABY
+ACTION: In the darkness under the stairs where the dragon hides, only its eyes visible, watching
+START_STATE: Dragon's eyes in the dark
+END_STATE: Scene holds
+SFX: muffled shouting outside
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: DRAGON-BABY
+
+SCENE 14
+TITLE: The Dragon Rises
+LOCATION: Cottage and village
+TIME: Night
+WEATHER: Clear, cold
+SCENE_DURATION: 65
+
+SHOT 14-01
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: LYRA
+ACTION: From outside the cottage, a sudden deep dragon roar erupts from inside, the crowd flinching
+START_STATE: Roar erupts from inside
+END_STATE: Crowd recoiling in fear
+SFX: deep roar
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: LYRA
+
+SHOT 14-02
+DURATION: 3
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: HUNTER
+ACTION: Zoom on the hunter's face, a strange smile forming, he understands the dragon is coming out on its own
+START_STATE: Smile forming on the hunter's face
+END_STATE: Roof begins to crack
+SFX: wood cracking
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: HUNTER
+
+SHOT 14-03
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TILT
+CHARACTERS: DRAGON-BABY
+ACTION: The cottage roof bursts and a large young dragon climbs up through it, emerging into the night sky
+START_STATE: Roof bursting
+END_STATE: Dragon standing on the broken roof
+SFX: roof collapse, roar
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 14-04
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: DRAGON-BABY
+ACTION: The dragon flying over the crowd, roaring, its shadow passing over the people below
+START_STATE: Dragon flying low over the crowd
+END_STATE: Shadow sweeping across the villagers
+SFX: wing beats, roaring
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 14-05
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: HUNTER
+ACTION: Hunters firing arrows and bolts at the dragon, none finding real purchase, the dragon banking away
+START_STATE: Arrows flying at the dragon
+END_STATE: Dragon banking away
+SFX: bow twangs, arrows whoosh
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: HUNTER, DRAGON-BABY
+
+SHOT 14-06
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: DRAGON-BABY
+ACTION: The dragon turning back and attacking the hunter's companions with a burst of fire from its mouth, the remaining crowd scattering in fear
+START_STATE: Dragon diving toward the men
+END_STATE: Men scattering
+SFX: fire burst, screams
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 14-07
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: HUNTER
+ACTION: The hunter loading a huge fearsome ballista-like weapon, a giant crossbow, aiming at the dragon
+START_STATE: Ballista loaded, aimed
+END_STATE: Bolt fired
+SFX: heavy mechanism, twang
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SHOT 14-08
+DURATION: 2
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: DRAGON-BABY
+ACTION: The great bolt strikes the dragon directly, it roars once in pain and shock
+START_STATE: Bolt striking the dragon
+END_STATE: Dragon roaring in pain
+SFX: impact, roar
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 14-09
+DURATION: 3
+LENS: 35mm
+FRAMING: wide
+CAMERA: STATIC
+CHARACTERS: DRAGON-BABY, AGNES, HUNTER
+ACTION: The dragon retaliating with one fierce burst of fire from its mouth at the hunter, his wife still standing beside him
+START_STATE: Dragon breathing fire at the hunter
+END_STATE: Fire engulfs the area where the wife stands
+SFX: fire roar
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-BABY, AGNES, HUNTER
+
+SHOT 14-10
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: AGNES
+ACTION: The wife falls, killed by the fire, the hunter raging
+START_STATE: Wife falling
+END_STATE: Hunter screaming in rage
+SFX: scream
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: AGNES, HUNTER
+
+SHOT 14-11
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: CONTROLLED_HANDHELD
+CHARACTERS: HUNTER
+ACTION: The hunter fleeing into the village, the dragon pursuing with fire
+START_STATE: Hunter running
+END_STATE: Fire striking near him
+SFX: footsteps, fire
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: HUNTER, DRAGON-BABY
+
+SHOT 14-12
+DURATION: 3
+LENS: 35mm
+FRAMING: wide
+CAMERA: STATIC
+CHARACTERS: DRAGON-BABY
+ACTION: The dragon unleashing a fierce fire blast over the fleeing hunter, nearby cottages beginning to collapse and burn
+START_STATE: Fire blast over the lane
+END_STATE: Cottages burning, a large burning wooden beam falling toward the hunter
+SFX: fire roar, collapse
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 14-13
+DURATION: 3
+LENS: 50mm
+FRAMING: medium
+CAMERA: STATIC
+CHARACTERS: HUNTER
+ACTION: A large burning wooden beam falls on the hunter, burying him in the collapse, he appears dead
+START_STATE: Beam falling on the hunter
+END_STATE: Hunter buried in debris, still
+SFX: collapse, dust
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 3
+GENERATION_LEVEL: 3
+REFERENCE_ASSETS: HUNTER
+
+SCENE 15
+TITLE: The Landing
+LOCATION: Village lane
+TIME: Night
+WEATHER: Clear after fire
+SCENE_DURATION: 45
+
+SHOT 15-01
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: DRAGON-BABY, LYRA
+ACTION: The dragon descending and landing beside the girl who raised it, she lies still, appearing dead
+START_STATE: Dragon descending toward the girl
+END_STATE: Dragon landed beside her
+SFX: wing beats fading, embers
+MUSIC: mournful cello begins
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-BABY, LYRA
+
+SHOT 15-02
+DURATION: 5
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-BABY
+ACTION: The dragon gently placing its head over the girl, a tear falling from the dragon's eye
+START_STATE: Dragon's head over the girl
+END_STATE: Tear falling
+SFX: soft breath
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 15-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: LYRA
+ACTION: Close on the girl's still face in the firelight, appearing gone
+START_STATE: Girl's still face
+END_STATE: Scene holds
+SFX: embers
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: LYRA
+
+SHOT 15-04
+DURATION: 4
+LENS: 50mm
+FRAMING: medium
+CAMERA: LOCKED
+CHARACTERS: HUNTER
+ACTION: Under the collapsed debris where the hunter lies, a hand stirs faintly in the darkness
+START_STATE: Debris buried, dark
+END_STATE: A hand moves
+SFX: rubble shifting
+MUSIC: stops
+TRANSITION: cut
+COMPLEXITY: 2
+GENERATION_LEVEL: 2
+REFERENCE_ASSETS: HUNTER
+
+SCENE 16
+TITLE: Ashes
+LOCATION: Burnt village lane
+TIME: Dawn
+WEATHER: Cold morning light
+SCENE_DURATION: 40
+
+SHOT 16-01
+DURATION: 5
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_TRACK
+CHARACTERS: none
+ACTION: The burnt village at dawn, smoking ruins, cold morning light over the ashes
+START_STATE: Smoking ruins at dawn
+END_STATE: Dragon and girl visible in the distance
+SFX: wind, settling embers
+MUSIC: none
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+
+SHOT 16-02
+DURATION: 5
+LENS: 50mm
+FRAMING: medium
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-BABY, LYRA
+ACTION: The dragon curled around the girl in the ashes, both still, morning light reaching them
+START_STATE: Dragon curled around the girl
+END_STATE: The dragon's eye opens slightly, looking at the horizon
+SFX: soft breath
+MUSIC: subtle piano notes
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: DRAGON-BABY, LYRA
+
+SHOT 16-03
+DURATION: 4
+LENS: 85mm
+FRAMING: close-up
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-BABY
+ACTION: Close-up of the dragon's eye reflecting the dawn, grief and something new in it
+START_STATE: Dragon's eye reflecting dawn
+END_STATE: Scene holds
+SFX: wind
+MUSIC: continue
+TRANSITION: cut
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: DRAGON-BABY
+
+SHOT 16-04
+DURATION: 4
+LENS: 35mm
+FRAMING: wide
+CAMERA: SLOW_PUSH
+CHARACTERS: DRAGON-BABY, LYRA
+ACTION: Final wide frame, the dragon and the girl small against the burnt village, one survivor's hand already stirring, the story left open
+START_STATE: Wide final frame
+END_STATE: Fade to black
+SFX: wind, one distant breath
+MUSIC: three piano notes
+TRANSITION: fade
+COMPLEXITY: 1
+GENERATION_LEVEL: 1
+REFERENCE_ASSETS: DRAGON-BABY, LYRA

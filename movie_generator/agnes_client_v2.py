@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""Agnes AI gateway client with multi-key rotation and quota tracking."""
+"""Agnes AI gateway client v2 — rebuilt for Agnes Video 2.5 API.
+
+Video 2.5 contract (per wiki.agnes-ai.com/en/docs/agnes-video-25):
+  POST /v1/videos  {model, prompt, mode: text|keyframe|reference,
+                    seconds: "4"-"12", size: 720P|1080P|1K|2K,
+                    aspect_ratio: 21:9|16:9|..., seed, n: 1}
+  keyframe mode: first_frame / last_frame image URLs (publicly reachable)
+  reference mode: images[] / audios[] / videos[].url
+  GET /agnesapi?video_id=<ID>&model_name=<MODEL>  -> status completed|failed, url
+  Native audio: describe ambient/action sound in the prompt.
+  Forbidden: width, height, fps, num_frames, quality, pixel sizes in size.
+"""
 from __future__ import annotations
 
 import dataclasses
@@ -16,16 +27,20 @@ import requests
 BASE_URL = "https://apihub.agnes-ai.com/v1"
 POLL_URL = "https://apihub.agnes-ai.com/agnesapi"
 MAX_ATTEMPTS = 3
-DEFAULT_VIDEO_RPM = 10
-VIDEO_DAILY_SECONDS = 1000.0
 
 log = logging.getLogger(__name__)
 
 MODELS = {
-    "chat": ["agnes-2.5-flash", "agnes-2.5-pro"],
-    "image": ["agnes-image-2.1-flash", "agnes-image-2.1-pro"],
-    "video": ["agnes-video-v2.0"],
+    "chat": ["agnes-2.5-flash", "agnes-2.5-pro", "agnes-3.0-flash"],
+    "image": ["agnes-image-2.5-flash", "agnes-image-2.1-flash", "agnes-image-2.1-pro"],
+    "video": ["agnes-video-2.5-flash", "agnes-video-2.5"],
 }
+
+VIDEO_SIZES = ("720P", "1080P", "1K", "2K")
+ASPECT_RATIOS = ("21:9", "16:9", "4:3", "1:1", "3:4", "9:16")
+
+# Publicly-reachable base for media URLs served to Agnes (keyframe mode needs this)
+MEDIA_BASE_URL = "https://maze-labor-three-crouch.2n6.me/moviedata"
 
 
 class AllKeysExhausted(Exception):
@@ -36,10 +51,8 @@ class AllKeysExhausted(Exception):
 class KeyState:
     name: str
     api_key: str
-    plan: str = "free"                    # free | token | enterprise
-    video_rpm: int = DEFAULT_VIDEO_RPM
-    disabled: bool = False                # 401/403 => disabled
-    # runtime usage ledger (persisted separately)
+    plan: str = "free"
+    disabled: bool = False
     video_seconds_used_today: float = 0
     requests_today: int = 0
     cooldown_until: float = 0.0
@@ -56,7 +69,7 @@ class KeyState:
 
 
 class AgnesClient:
-    """Agnes AI gateway client with transparent multi-key rotation."""
+    """Agnes AI gateway client with transparent multi-key rotation (v2 API)."""
 
     def __init__(self, keys_file: str | Path = "keys.json", ledger_file: str | Path = "keys_ledger.json"):
         self.keys_file = Path(keys_file)
@@ -77,7 +90,6 @@ class AgnesClient:
                 name=k.get("name", f"k{len(self.keys)+1}"),
                 api_key=k["api_key"],
                 plan=k.get("plan", "free"),
-                video_rpm=k.get("video_rpm", DEFAULT_VIDEO_RPM),
             )
             for k in keys
             if k.get("api_key")
@@ -90,7 +102,7 @@ class AgnesClient:
         try:
             data = json.loads(self.ledger_file.read_text())
             if data.get("date") != str(date.today()):
-                return  # new day -> fresh quota
+                return
             for st in data.get("keys", []):
                 k = self.get_key(st["name"])
                 if k:
@@ -117,36 +129,35 @@ class AgnesClient:
         return None
 
     def _pick_key(self, purpose: str, seconds: float = 0) -> KeyState:
-        """Least-loaded active key with quota available for this request."""
+        """Least-loaded active key; rotate on failure instead of giving up."""
         with self._lock:
             now = time.time()
-            candidates = []
-            for k in self.keys:
-                if k.disabled or k.cooldown_until > now:
-                    continue
-                if purpose == "video" and k.video_seconds_used_today + seconds > VIDEO_DAILY_SECONDS:
-                    continue
-                candidates.append(k)
+            candidates = [k for k in self.keys
+                          if not k.disabled and k.cooldown_until <= now]
             if not candidates:
-                raise AllKeysExhausted(
-                    "No Agnes key has remaining quota (video_seconds/day or cooldown)."
-                )
+                raise AllKeysExhausted("No active Agnes key available.")
             candidates.sort(key=lambda k: (k.video_seconds_used_today, k.requests_today))
             k = candidates[0]
             k.last_used = now
             k.requests_today += 1
             if purpose == "video":
-                k.video_seconds_used_today += seconds  # conservative reserve
+                k.video_seconds_used_today += seconds
             self.save_ledger()
             return k
 
-    def _handle_error(self, k: KeyState, status: int):
+    def _handle_error(self, k: KeyState, status: int, body: str = ""):
         if status in (401, 403):
-            k.disabled = True
-            log.warning("Key %s disabled (HTTP %d)", k.name, status)
+            if "insufficient_user_quota" in body:
+                # quota exhausted (may reset daily) — cooldown, don't kill key
+                k.cooldown_until = time.time() + 1800
+                log.warning("Key %s out of quota — cooldown 30min", k.name)
+            else:
+                k.disabled = True
+                log.warning("Key %s disabled (HTTP %d)", k.name, status)
         elif status == 429:
-            k.cooldown_until = time.time() + 300
-            log.warning("Key %s cooling down 5min (429)", k.name)
+            # short cooldown then rotate to another key
+            k.cooldown_until = time.time() + 120
+            log.warning("Key %s cooling down 2min (429)", k.name)
         self.save_ledger()
 
     def refund_video(self, key_name: str, seconds: float):
@@ -160,20 +171,19 @@ class AgnesClient:
              temperature: float = 0.7, max_tokens: int = 4096, retries: int = MAX_ATTEMPTS) -> str:
         if model not in MODELS["chat"]:
             raise ValueError(f"Unknown chat model: {model}")
-        if image_url:
+        if image_url and len(messages) == 1:
             messages = [{"role": "user", "content": [
                 {"type": "text", "text": messages[-1]["content"]},
                 {"type": "image_url", "image_url": {"url": image_url}},
-            ]}] if len(messages) == 1 else messages
-
+            ]}]
         body = {"model": model, "messages": messages, "temperature": temperature,
                 "max_tokens": max_tokens}
         last_err = None
-        for _ in range(retries):
+        for attempt in range(retries):
             try:
                 k = self._pick_key("chat")
-            except AllKeysExhausted as e:
-                raise e
+            except AllKeysExhausted:
+                raise
             try:
                 r = requests.post(f"{BASE_URL}/chat/completions",
                                   headers={"Authorization": f"Bearer {k.api_key}"},
@@ -186,24 +196,23 @@ class AgnesClient:
                 return r.json()["choices"][0]["message"]["content"]
             self._handle_error(k, r.status_code)
             last_err = f"HTTP {r.status_code}: {r.text[:200]}"
-            time.sleep(2 ** (_ or 1))
+            time.sleep(min(2 ** (attempt + 1), 30))
         raise RuntimeError(f"chat failed after {retries} attempts: {last_err}")
 
     # --------------------------------------------------------------- image
-    def image(self, prompt: str, size: str = "1280x720", model: str = "agnes-image-2.1-flash",
+    def image(self, prompt: str, size: str = "1024x1024", model: str = "agnes-image-2.5-flash",
               retries: int = MAX_ATTEMPTS, image_url: str | None = None) -> dict:
         if model not in MODELS["image"]:
             raise ValueError(f"Unknown image model: {model}")
         body = {"model": model, "prompt": prompt, "size": size}
         if image_url:
-            # img2img: Agnes text-image queue accepts base64 via "image" field
             body["image"] = image_url
         last_err = None
-        for _ in range(retries):
+        for attempt in range(retries):
             try:
                 k = self._pick_key("image")
-            except AllKeysExhausted as e:
-                raise e
+            except AllKeysExhausted:
+                raise
             try:
                 r = requests.post(f"{BASE_URL}/images/generations",
                                   headers={"Authorization": f"Bearer {k.api_key}"},
@@ -216,63 +225,100 @@ class AgnesClient:
                 return r.json()
             self._handle_error(k, r.status_code)
             last_err = f"HTTP {r.status_code}: {r.text[:200]}"
-            time.sleep(2 ** (_ or 1))
+            time.sleep(min(2 ** (attempt + 1), 30))
         raise RuntimeError(f"image failed: {last_err}")
 
-    # ---------------------------------------------------------------- video
-    def video(self, prompt: str, width: int = 1152, height: int = 768,
-              num_frames: int = 121, frame_rate: int = 24, image_url: str | None = None,
-              first_frame_url: str | None = None, poll_interval: int = 15,
-              poll_timeout: int = 1800) -> str:
-        """Create async video task, poll until ready. Returns video download URL."""
-        duration = num_frames / frame_rate
-        body = {
-            "model": "agnes-video-v2.0",
+    # --------------------------------------------------------------- video
+    def video(self, prompt: str, seconds: str = "5", mode: str = "text",
+              size: str = "720P", aspect_ratio: str = "21:9", seed: int | None = None,
+              first_frame_url: str | None = None, last_frame_url: str | None = None,
+              reference_images: list[str] | None = None,
+              model: str = "agnes-video-2.5-flash",
+              poll_interval: int = 8, poll_timeout: int = 1800) -> str:
+        """Create async Video 2.5 task, poll until ready. Returns video URL."""
+        if mode not in ("text", "keyframe", "reference"):
+            raise ValueError(f"Invalid video mode: {mode}")
+        if size not in VIDEO_SIZES:
+            raise ValueError(f"Invalid size: {size}")
+        if aspect_ratio not in ASPECT_RATIOS:
+            raise ValueError(f"Invalid aspect_ratio: {aspect_ratio}")
+
+        body: dict = {
+            "model": model,
             "prompt": prompt,
-            "width": width,
-            "height": height,
-            "num_frames": num_frames,
-            "frame_rate": frame_rate,
+            "mode": mode,
+            "seconds": str(seconds),
+            "size": size,
+            "aspect_ratio": aspect_ratio,
+            "n": 1,
         }
-        if image_url:
-            body["image_url"] = image_url
-        if first_frame_url:
-            body["first_frame_url"] = first_frame_url
+        if seed is not None:
+            body["seed"] = seed
+        if mode == "keyframe":
+            if first_frame_url:
+                body["first_frame"] = first_frame_url
+            if last_frame_url:
+                body["last_frame"] = last_frame_url
+            if not (first_frame_url or last_frame_url):
+                raise ValueError("keyframe mode requires first_frame or last_frame")
+        elif mode == "reference":
+            if reference_images:
+                body["images"] = reference_images
+            else:
+                raise ValueError("reference mode requires reference media")
 
-        k = self._pick_key("video", seconds=duration)
-        r = requests.post(f"{BASE_URL}/videos",
-                          headers={"Authorization": f"Bearer {k.api_key}"},
-                          json=body, timeout=120)
-        if r.status_code != 200:
-            self._handle_error(k, r.status_code)
-            self.refund_video(k.name, duration)
-            raise RuntimeError(f"video task create failed: {r.status_code} {r.text[:200]}")
+        billable = float(seconds)
+        last_err = None
+        for attempt in range(6):
+            try:
+                k = self._pick_key("video", seconds=billable)
+            except AllKeysExhausted as e:
+                raise e
+            try:
+                r = requests.post(f"{BASE_URL}/videos",
+                                  headers={"Authorization": f"Bearer {k.api_key}"},
+                                  json=body, timeout=120)
+            except requests.RequestException as e:
+                last_err = f"network: {e}"
+                time.sleep(10)
+                continue
+            if r.status_code == 200:
+                data = r.json()
+                video_id = data.get("video_id") or data.get("id") or data.get("task_id")
+                if not video_id:
+                    self.refund_video(k.name, billable)
+                    raise RuntimeError(f"No video_id in response: {str(data)[:300]}")
+                return self._poll_video(video_id, model, k, poll_interval, poll_timeout)
+            self._handle_error(k, r.status_code, body=r.text[:400])
+            self.refund_video(k.name, billable)
+            last_err = f"HTTP {r.status_code}: {r.text[:200]}"
+            # 400 = request problem, not key problem: retrying with another key won't help
+            if r.status_code == 400:
+                break
+            if r.status_code == 503:
+                time.sleep(min(60 * (attempt + 1), 180))
+                continue
+            time.sleep(min(2 ** (attempt + 1), 30))
+        raise RuntimeError(f"video task create failed: {last_err}")
 
-        data = r.json()
-        video_id = data.get("video_id") or data.get("id") or data.get("task_id")
-        if not video_id:
-            self.refund_video(k.name, duration)
-            raise RuntimeError(f"No video_id in response: {str(data)[:300]}")
-
-        return self._poll_video(video_id, k, poll_interval, poll_timeout)
-
-    def _poll_video(self, video_id: str, k: KeyState, poll_interval: int,
+    def _poll_video(self, video_id: str, model: str, k: KeyState, poll_interval: int,
                     poll_timeout: int) -> str:
         start = time.time()
         while time.time() - start < poll_timeout:
             time.sleep(poll_interval)
             try:
-                r = requests.get(POLL_URL, params={"video_id": video_id},
-                                 headers={"Authorization": f"Bearer {k.api_key}"},
-                                 timeout=60)
+                r = requests.get(POLL_URL, params={"video_id": video_id, "model_name": model},
+                                 headers={"Authorization": f"Bearer {k.api_key}"}, timeout=60)
             except requests.RequestException:
                 continue
             if r.status_code != 200:
+                if r.status_code == 429:
+                    time.sleep(poll_interval * 2)
                 continue
             d = r.json()
             status = str(d.get("status", "")).lower()
-            if status in ("succeeded", "success", "done", "completed", "finished"):
-                url = d.get("video_url") or d.get("url") or d.get("output", {}).get("video_url")
+            if status == "completed":
+                url = d.get("url") or d.get("video_url") or d.get("output", {}).get("video_url")
                 if url:
                     return url
             if status in ("failed", "error", "cancelled"):
